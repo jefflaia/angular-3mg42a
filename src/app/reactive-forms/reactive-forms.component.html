@@ -10,7 +10,7 @@
             class="form-control"
             formControlName="courseName">
         </div>
-        <div *ngIf="courseForm.get('courseName').valid && courseForm.get('courseName').touched">
+        <div style="color:red" *ngIf="!courseForm.get('courseName').valid && courseForm.get('courseName').touched">
           Please enter valid course name !
         </div>
         <div class="col-sm-2 form-group">

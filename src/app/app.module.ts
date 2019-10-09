@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartService } from './cart.service';
+import { CourseService } from './course.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
@@ -42,7 +43,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ReactiveFormsComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService]
+  providers: [CartService, CourseService]
 })
 export class AppModule { }
 

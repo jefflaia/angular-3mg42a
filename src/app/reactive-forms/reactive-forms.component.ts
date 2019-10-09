@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
+import { CourseService } from '../course.service';
+
 @Component({
   selector: 'app-reactive-forms',
   templateUrl: './reactive-forms.component.html',
@@ -9,11 +11,18 @@ import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 export class ReactiveFormsComponent implements OnInit {
   courseForm: FormGroup;
 
-  constructor() {
+  constructor(private courseService: CourseService) {
   }
 
   ngOnInit() {
     this.initForm();
+    
+    this.courseService.course$.subscribe(x=> {
+      this.courseForm.patchValue(x);
+    });
+
+    this.courseForm.valueChanges.subscribe(val => console.log(val) );
+    this.courseService.getOne();
   }
 
   onSubmit() {
