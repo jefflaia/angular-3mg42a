@@ -13,6 +13,7 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { TemplateFormsComponent } from './template-forms/template-forms.componen
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
       { path: 'templateforms', component: TemplateFormsComponent },
+      { path: 'reactiveforms', component: ReactiveFormsComponent },
    ])
   ],
   declarations: [
@@ -36,7 +38,8 @@ import { TemplateFormsComponent } from './template-forms/template-forms.componen
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
-    TemplateFormsComponent
+    TemplateFormsComponent,
+    ReactiveFormsComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]
